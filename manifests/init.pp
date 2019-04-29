@@ -14,8 +14,6 @@ class storage (
     contain storage::install
     contain storage::config
 
-    include cerit::passwd
-
     if $cifs_enabled {
         contain storage::cifs::init
     } elsif $pcmk_enabled {
